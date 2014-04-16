@@ -1,0 +1,57 @@
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0669qE8-xHbI-414wmX3_yLJ6q-r3bFY&sensor=true"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true"></script>
+<script src="//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" type="text/javascript"></script>
+
+<%= render partial: '/layouts/navbar' %>
+
+<h1 id="title"><u>Profiles</u></h1>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#languageFilter li').on('click', 'a', function() {
+      language = $(this).attr('id');
+      $('#container').isotope({ filter: ("."+language) });
+      console.log(language);
+    });
+  });
+</script>
+
+
+
+<div id="languageFilter"> 
+  <a href="#" class="button" data-dropdown="drop">Language &raquo;</a>
+  <ul id="drop" class="tiny f-dropdown" data-dropdown-content>
+    <% Interest.all.each do |interest| %> 
+      <li><a href="#" id="<%= interest.name %>"> <%= interest.name %></a></li>
+    <% end %> 
+  </ul>
+</div>
+
+
+<div id="container">
+    <% @users.each do |u| %>
+      <div class="flip-container <% u.interests.each do |interest| %> <%= interest.name %> <% end %>" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+            <div class="front">
+                    <span class="name"><%= u.full_name %></span>
+
+            </div>
+                <div class="back">
+                    <div class="back-logo" style="background: url(<%= u.avatar_file_size ? u.avatar.url(:medium) : "/assets/peared.jpg" %>) 0 0 no-repeat">
+
+                    </div>
+                    <div class="back-title"><%= u.full_name %></div>
+                    <p>
+                        <%= u.location  %>
+                        <br />
+                        <%= u.email  %>
+                        <br /> 
+                    </p>
+                </div>
+        </div>
+      </div>
+    <% end %>
+</div>
+
+
+<%= render partial: 'map' %>

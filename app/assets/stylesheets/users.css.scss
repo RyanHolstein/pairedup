@@ -1,0 +1,318 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+		font-size: 50px;
+}
+
+h4 {
+		font-size: 25px;
+}
+
+
+/* background */
+
+.signUpPage { 
+	background-color: #AADDDD;
+	position: center;
+	height: 2000px;
+	margin: 0 auto;
+	background-repeat: no-repeat; 
+}
+
+.logInPage {
+	background-image: url(can_band_together_1.jpg);
+	position: center;
+	background-repeat: no-repeat; 
+}
+
+/* sign up page */
+
+#signUp {
+	margin-bottom: 500px;
+}
+
+.signInParagraph {
+	margin: 0 auto;
+	position: relative;
+	color: #882200;
+}
+
+#meetUp {
+	margin-bottom: 300px;
+}
+
+#learn {
+	margin-bottom: 300px;
+}
+
+#share {
+	margin-bottom: 300px;
+}
+
+#focus {
+	margin-bottom: 300px;
+}
+
+#myModal {
+	font-family: 'Stardos Stencil', cursive;
+}
+
+/* sign up page text color */
+
+.paragraphTitle {
+	color: #552200;
+	width: 500px;
+	margin: 0 auto;
+	font-family: 'Stardos Stencil', cursive;
+	font-size: 35px;
+}
+
+#signUpPage {
+	color: #660000;
+}
+
+#title {
+	color: #441100;
+	font-size: 60px;
+	font-family: 'Stardos Stencil', cursive;
+}
+
+.newUser {
+	color: #772200;
+}
+
+.profileTag {
+	color: #662200;
+}
+
+#innerP {
+	float: left;
+	font-size: 25px;
+	font-family: 'Stardos Stencil', cursive;
+	color: #662200;
+}
+
+.meetPic {
+	float: right;
+	width: 700px;
+	margin: 100px;
+}
+
+.reason1 {
+	font-family: 'Stardos Stencil', cursive;
+	font-size: 35px;
+	color: #662200;
+}
+
+.reason2 {
+	font-family: 'Stardos Stencil', cursive;
+	font-size: 35px;
+	color: #662200;
+}
+
+.reason3 {
+	font-family: 'Stardos Stencil', cursive;
+	font-size: 35px;
+	color: #662200;
+}
+
+
+/* show page*/
+
+#myProfile1 {
+	font-size: 30px;
+	color: #551100;
+}
+
+#myProfile {
+	font-size: 25px;
+	color: #441100;
+}
+
+
+/* profile page */
+
+.profilePage {
+	font-size: 60px;
+}
+
+.profileTitle {
+	margin-top: 20px;
+}
+
+.flip-container {
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-o-perspective: 1000;
+	perspective: 1000;
+
+		border: 5px solid #ccc;
+		float: left;
+		margin: 15px;
+}
+
+.flip-container:hover .flipper,  
+	.flip-container.hover .flipper {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		-o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+		}
+
+.flip-container, .front, .back {
+		width: 320px;
+		height: 427px;
+}
+
+.flipper {
+		-webkit-transition: 0.6s;
+		-webkit-transform-style: preserve-3d;
+
+		-moz-transition: 0.6s;
+		-moz-transform-style: preserve-3d;
+	
+		-o-transition: 0.6s;
+		-o-transform-style: preserve-3d;
+
+		transition: 0.6s;
+		transform-style: preserve-3d;
+
+		position: relative;
+}
+
+.front, .back {
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-o-backface-visibility:  hidden;
+		backface-visibility: hidden;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+}
+
+.front {
+		/*background: url(http://thumb7.shutterstock.com/display_pic_with_logo/244417/149679119/stock-vector-hands-silhouettes-with-hearts-149679119.jpg) 0 0 no-repeat;*/
+		background: url(paired.jpg) 0 0 no-repeat;
+		position: center;
+		z-index: 2;
+}
+
+.back {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		-o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+
+		background: #f8f8f8;
+}
+
+.front .name {
+		font-size: 2em;
+		/*display: inline-block;*/
+		background: rgba(33, 33, 33, 0.9);
+		color: #f8f8f8;
+		font-family: Courier;
+		padding: 5px 10px;
+		border-radius: 5px;
+		bottom: 60px;
+		/*left: 25%;*/
+		position: absolute;
+		text-shadow: 0.1em 0.1em 0.05em #333;
+
+		/*-webkit-transform: rotate(-20deg);
+		-moz-transform: rotate(-20deg);
+		-o-transform: rotate(-20deg);
+		transform: rotate(-20deg);*/
+}
+
+.back-logo {
+		position: absolute;
+		top: 40px;
+		left: 90px;
+		width: 160px;
+		height: 117px;
+		/*background: url(http://images.clipartof.com/thumbnails/28553-Clipart-Illustration-Of-A-Group-Of-Four-Guys-Standing-Together-Silhouetted-Over-White.jpg) 0 0 no-repeat;*/
+		
+}
+
+.back-title {
+		font-weight: bold;
+		color: #00304a;
+		position: absolute;
+		top: 180px;
+		left: 0;
+		right: 0;
+		text-align: center;
+		text-shadow: 0.1em 0.1em 0.05em #acd7e5;
+		font-family: Courier;
+		font-size: 2em;
+}
+
+.back p {
+		position: absolute;
+		bottom: 40px;
+		left: 0;
+		right: 0;
+		text-align: center;
+		padding: 0 20px;
+		font-family: arial;
+		line-height: 2em;
+}
+
+.top-bar {
+	color: white;
+	font-size: 30px;
+}
+
+
+/* forms */
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+/* isotopes */
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+      -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+      -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:    -ms-transform, opacity;
+      -o-transition-property:      -o-transform, opacity;
+          transition-property:        transform, opacity;
+}
+
+
+
+
+
+
+
